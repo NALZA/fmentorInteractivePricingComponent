@@ -17,13 +17,14 @@
 	display: flex;
 	height: 100vh;
 	width: 100vw;
+	margin: 0;
 	align-items: center;
 	justify-content: flex-start;
 	flex-direction: column;
 	background-color: var(--VeryPaleBlue);
 	background-image: url(./images/bg-pattern.svg);
-	background-size: 100%;
 	background-repeat: no-repeat;
+	font-family: 'Manrope', sans-serif;
 }
 
 .intro {
@@ -31,7 +32,6 @@
 	background-repeat: no-repeat;
 	background-position: center;
 	text-align: center;
-	font-family: 'Manrope', sans-serif;
 	padding: 40px 0px;
 }
 
@@ -51,21 +51,111 @@
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-	min-width: 600px;
+	width: 600px;
 	background-color: var(--White);
 	box-shadow: 0 0 10px 0px #7a7a7a5b;
 	border-radius: 10px;
 	padding: 20px 0px;
 }
 
-.card div {
+form {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	color: var(--GrayishBlue);
+	width: 80%;
+	font-size: small;
+}
+
+form div {
 	padding: 10px;
+}
+.s1 {
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
 }
 
 @media only screen and (max-width: 1024px) {
 	.card {
 		width: 90%;
 	}
+}
+
+@media only screen and (min-width: 1024px) {
+	.App {
+		background-size: 100%;
+	}
+	.s1 {
+		width: 100%;
+		align-items: center;
+		flex-direction: row;
+		justify-content: space-between;
+		display: flex;
+		flex-wrap: wrap;
+	}
+	.s2 {
+		justify-content: space-between;
+	}
+	.slider {
+		order: 1;
+	}
+}
+
+.money {
+	display: flex;
+	align-items: center;
+}
+
+.moneyText {
+	font-size: 40px;
+	font-weight: 800;
+	color: var(--DarkDesaturatedBlue);
+	margin-right: 10px;
+}
+
+.billing-text {
+	padding: 0px;
+	display: flex;
+	width: 115%;
+	align-items: center;
+	justify-content: center;
+	margin-bottom: 20px;
+}
+.billing-text div {
+	padding: 0;
+}
+.discountLabel {
+	color: var(--LightRed);
+	background-color: var(--LightGrayishRed);
+	margin-left: 5px;
+	border-radius: 10px;
+	padding: 2px 5px 2px 5px;
+	font-size: x-small;
+}
+
+.tickText {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+.checkIcon {
+	margin-right: 20px;
+}
+
+.slider {
+	flex-shrink: 0;
+}
+
+.s2 {
+	width: 120%;
+	border-top: 1px solid var(--LightGrayishBlue);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-wrap: wrap;
 }
 
 button {
